@@ -5,9 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>GROCERY LIST</title>
 </head>
 <body>
+    <div class="container">
+        <h1>GROCERY LIST</h1>
+        <div class="grocery-items">
+        <input type="text" id="input" placeholder="Enter items here"><button id="btn">ADD ITEM</button>
+    </div>
+    <ul class="item-list">
+        <li class="list">
+            <label for="1">
+                <!-- <input type="checkbox" id="1"> -->
+                <p> <input type="checkbox" id="1"> Morning jugs from 06:00am - 08:30</p>
+            </label>
+            <div class="settings">
+            <i class="fa fa-ellipsis-h" aria-hidden="true" id="bars"></i>
+            <ul class="task">
+                <li class="controls"><i class="fa fa-pencil" aria-hidden="true" id="pen"></i>
+                    Edit</li>
+                <li class="controls"><i class="fa fa-trash" aria-hidden="true"></i>Delete
+                </li>
+
+            </ul>
+            </div>
+        </li>
+
+        <li class="list">
+            <label for="2">
+                <!-- <input type="checkbox" id="2"> -->
+                <p><input type="checkbox" id="2">  Morning jugs from 06:00am - 08:30</p>
+            </label>
+            <div class="settings">
+
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+<!-- <ul class="task">
+    <li class="controls"><i class="fa fa-pencil" aria-hidden="true">Edit</i>
+    </li>
+    <li class="controls"><i class="fa fa-trash" aria-hidden="true">Delete</i>
+    </li>
+
+</ul> -->
+            </div>
+        </li>
+        <li class="list">
+            <label for="3">
+                <!-- <input type="checkbox" id="3"> -->
+                <p><input type="checkbox" id="3">  Morning jugs from 06:00am - 08:30</p>
+            </label>
+            <div class="settings">
+
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+<!-- <ul class="task">
+    <li class="controls"><i class="fa fa-pencil" aria-hidden="true">Edit</i>
+    </li>
+    <li class="controls"><i class="fa fa-trash" aria-hidden="true">Delete</i>
+    </li>
+
+</ul> -->
+            </div>
+        </li>
+        <li class="list">
+            <label for="4">
+                <!-- <input type="checkbox" id="4"> -->
+                <p><input type="checkbox" id="4">  Morning jugs from 06:00am - 08:30</p>
+            </label>
+            <div class="settings">
+
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+<!-- <ul class="task">
+    <li class="controls"><i class="fa fa-pencil" aria-hidden="true">Edit</i>
+    </li>
+    <li class="controls"><i class="fa fa-trash" aria-hidden="true">Delete</i>
+    </li>
+
+</ul> -->
+            </div>
+        </li>
+        
+    </ul>
+      
     <script src="./script.js"></script>
 </body>
 </html>
