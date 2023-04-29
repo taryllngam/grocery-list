@@ -19,10 +19,10 @@ body {
     opacity: 0.8;
 }
 
-.item-list {
+#item-list {
     border: 2px solid black;
     width: 50vw;
-    height: 100vh;
+    height: fit-content;
     font-family: 'Dancing Script', cursive;
     padding: 20px;
     display: flex;
@@ -30,15 +30,15 @@ body {
     gap: 2rem;
 }
 
-.item-list .list {
+#item-list .list {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.item-list li {
+#item-list li {
   list-style: none;
-  font-size: 25px;
+  font-size: 18px;
   display: flex;
   gap: 10%;
   border-bottom: 2px solid black;
