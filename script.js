@@ -94,8 +94,7 @@ const deleteTask = (id) => {
 }
 
 addButton.addEventListener('click', addItem),
-deleteBtn.addEventListener('click', deleteTask),
-editBtn.addEventListener('click', editTask)
+
 
 function saveData () {
   localStorage.setItem('data', list.innerHTML)
