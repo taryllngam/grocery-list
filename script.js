@@ -1,6 +1,7 @@
 const inputField = document.getElementById('input')
 const addButton = document.getElementById('btn')
 const deleteBtn = document.getElementById('delete')
+const editBtn = document.getElementById('edit')
 const list = document.getElementById('item-list')
 
 let arrTask = [
@@ -92,7 +93,9 @@ const deleteTask = (id) => {
   arrTask = newArr
 }
 
-addButton.addEventListener('click', addItem)
+addButton.addEventListener('click', addItem),
+deleteBtn.addEventListener('click', deleteTask),
+editBtn.addEventListener('click', editTask)
 
 function saveData () {
   localStorage.setItem('data', list.innerHTML)

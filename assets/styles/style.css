@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: linear-gradient(#0000007d, #3a3434),url("../images/1.jpg");
+  background-image: linear-gradient(#0000007d, #3a3434), url("../images/1.jpg");
   font-family: "Dancing Script", cursive;
 }
 
@@ -37,12 +37,12 @@ body {
 }
 
 .task li {
-    font-size: 15px;
-    padding-bottom: 5px;
-    cursor: pointer;
-    display: flex;
-    border-bottom: none;
-  }
+  font-size: 15px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  display: flex;
+  border-bottom: none;
+}
 
 #item-list li {
   list-style: none;
@@ -53,12 +53,12 @@ body {
 }
 
 .task {
-    position: absolute;
-    box-shadow: 0 6px 8px #928f8f;
-    z-index: 2;
-    transform: scale(0);
-    transition: 0.5s ease-in;
-  }
+  position: absolute;
+  box-shadow: 0 6px 8px #928f8f;
+  z-index: 2;
+  transform: scale(0);
+  transition: 0.5s ease-in;
+}
 
 .settings:hover .task {
   transform: scale(1);
