@@ -1,39 +1,40 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.489),rgb(58, 52, 52)), url('../images/1.jpg');
-    font-family: 'Dancing Script', cursive;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.489), rgb(58, 52, 52)),
+    url("../images/1.jpg");
+  font-family: "Dancing Script", cursive;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5rem;
-    background-color: white;
-    margin: 5% 20%;
-    padding: 5%;
-    opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  background-color: white;
+  margin: 5% 20%;
+  padding: 5%;
+  opacity: 0.8;
 }
 
 #item-list {
-    border: 2px solid black;
-    width: 50vw;
-    height: fit-content;
-    font-family: 'Dancing Script', cursive;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  border: 2px solid black;
+  width: 50vw;
+  height: fit-content;
+  font-family: "Dancing Script", cursive;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 #item-list .list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #item-list li {
@@ -45,57 +46,54 @@ body {
 }
 
 .settings:hover .task {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 ul li input {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 
 #input {
-    width: 30vw;
-    height: 6vh;
-    border-radius: 9px;
-    font-family: 'Dancing Script', cursive;
+  width: 30vw;
+  height: 6vh;
+  border-radius: 9px;
+  font-family: "Dancing Script", cursive;
 }
 
 #btn {
-    width: 10vw;
-    height: 7vh;
-    border-radius: 12px;
-    font-family: 'Dancing Script', cursive;
+  width: 10vw;
+  height: 7vh;
+  border-radius: 12px;
+  font-family: "Dancing Script", cursive;
 }
 
 .task li {
-    font-size: 15px;
-    padding-bottom: 5px;
-    cursor: pointer;
-    display: flex;
-    border-bottom: none;
+  font-size: 15px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  display: flex;
+  border-bottom: none;
 }
 
 .task {
-    position: absolute;
-    box-shadow: 0 6px 8px #928f8f;
-    z-index: 2;
-    transform: scale(0);
-    transition: 0.5s ease-in;
+  position: absolute;
+  box-shadow: 0 6px 8px #928f8f;
+  z-index: 2;
+  transform: scale(0);
+  transition: 0.5s ease-in;
 }
 
-.task .controls{
-    border-bottom: 1px solid black;
-    background-color: #ffffff;
-    padding: 2px 20px 2px 20px;
+.task .controls {
+  border-bottom: 1px solid black;
+  background-color: #ffffff;
+  padding: 2px 20px 2px 20px;
 }
 
 .task .controls:hover {
-    background-color: #d8d2d2;
-    transform: scale(1);
+  background-color: #d8d2d2;
+  transform: scale(1);
 }
 
 .settings {
-    position: relative;
+  position: relative;
 }
-
-
-
