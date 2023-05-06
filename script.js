@@ -1,18 +1,17 @@
-const inputField = document.getElementById('input')
-const addButton = document.getElementById('btn')
-const deleteBtn = document.getElementById('delete')
-const editBtn = document.getElementById('edit')
-const list = document.getElementById('item-list')
+const inputField = document.getElementById("input");
+const addButton = document.getElementById("btn");
+const list = document.getElementById("item-list");
+const deleteBtn = document.getElementById("delete");
+const editBtn = document.getElementById("edit");
 
-let arrTask = [
-]
+let arrTask = [];
 
-let taskHolder = {}
+let taskHolder = {};
 
 const displayTask = (newItem) => {
-  const newList = document.createElement('li')
-  newList.classList.add('list')
-  newList.id = newItem.id
+  const newList = document.createElement("li");
+  newList.classList.add("list");
+  newList.id = newItem.id;
 
   newList.innerHTML = `
     <p name=${newItem.id} > <input type="checkbox"> ${newItem.task}</p>
@@ -35,67 +34,68 @@ const displayTask = (newItem) => {
         </li>
     </ul>
     </div>
-  `
-  list.appendChild(newList)
-}
+  `;
+  list.appendChild(newList);
+};
 
 const addItem = () => {
   if (inputField.value <= 0) {
-    alert('Please add an item')
-    return
+    alert("Please add an item");
+    return;
   }
 
   if (taskHolder.id) {
-    const [pTagToEdit] = document.getElementsByName(taskHolder.id)
+    const [pTagToEdit] = document.getElementsByName(taskHolder.id);
 
     pTagToEdit.innerHTML = `
      <input type="checkbox"> ${inputField.value}
-    `
-    inputField.value = ''
-    taskHolder = {}
-    return
+    `;
+    inputField.value = "";
+    taskHolder = {};
+    return;
   }
 
-  let newId = 0
+  let newId = 0;
   if (arrTask.length <= 0) {
-    newId = 1
+    newId = 1;
   } else {
-    newId = arrTask[arrTask.length - 1].id + 1
+    newId = arrTask[arrTask.length - 1].id + 1;
   }
 
   const newItem = {
     id: newId,
-    task: inputField.value
-  }
+    task: inputField.value,
+  };
 
-  arrTask.push(newItem)
-  inputField.value = ''
-  displayTask(newItem)
-}
+  arrTask.push(newItem);
+  inputField.value = "";
+  displayTask(newItem);
+};
 
-const editTask = (name) => {
-  const [pTagToEdit] = document.getElementsByName(name)
+function editTask(name) {
+  const [pTagToEdit] = document.getElementsByName(name);
   const [taskToEdit] = arrTask.filter((item) => {
-    return item.id === name
-  })
-  inputField.value = pTagToEdit.innerText
-  taskHolder = taskToEdit
-  console.log(taskToEdit, pTagToEdit)
+    return item.id === name;
+  });
+  inputField.value = pTagToEdit.innerText;
+  taskHolder = taskToEdit;
+  console.log(taskToEdit, pTagToEdit);
 }
 
-const deleteTask = (id) => {
-  document.getElementById(id).remove()
+function deleteTask(id) {
+  document.getElementById(id).remove();
 
   const newArr = arrTask.filter((item) => {
-    return item.id !== id
-  })
+    return item.id !== id;
+  });
 
-  arrTask = newArr
+  arrTask = newArr;
 }
 
-addButton.addEventListener('click', addItem),
+addButton.addEventListener("click", addItem);
+deleteBtn.addEventListener("click", deleteTask);
+editBtn.addEventListener("click", editTask);
 
-
-function saveData () {
-  localStorage.setItem('data', list.innerHTML)
-}
+// function saveData () {
+//   localStorage.setItem('data', list.innerHTML)
+// }
